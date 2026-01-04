@@ -1,0 +1,21 @@
+/*
+  # Insert Sample Railroad Crossings Data
+  
+  Sample data for railroad crossing locations across the United States
+*/
+
+INSERT INTO crossings (source_id, name, device_type, lat, lon)
+VALUES
+  ('RC001', 'Main St & Industrial Ave', 'Grade Crossing', 40.7128, -74.0060),
+  ('RC002', 'Highway 101 Crossing', 'Grade Separation', 37.3382, -121.8863),
+  ('RC003', 'Downtown Station', 'Active Warning', 34.0522, -118.2437),
+  ('RC004', 'Bridge Over Riverdale', 'Passive Warning', 41.8781, -87.6298),
+  ('RC005', 'North County Loop', 'Grade Crossing', 39.7392, -104.9903),
+  ('RC006', 'Suburban Connector', 'Active Warning', 47.6062, -122.3321),
+  ('RC007', 'Industrial District', 'Grade Crossing', 42.3601, -71.0589),
+  ('RC008', 'Harbor View Junction', 'Active Warning', 25.7617, -80.1918),
+  ('RC009', 'Mountain Pass Crossing', 'Passive Warning', 39.5501, -119.8143),
+  ('RC010', 'Valley Road Intersection', 'Grade Crossing', 35.0895, -106.6504),
+  ('RC011', 'Coastal Rail Bridge', 'Active Warning', 32.7157, -117.1611),
+  ('RC012', 'Prairie Line Junction', 'Passive Warning', 44.5588, -93.2964)
+ON CONFLICT (source_id) DO NOTHING;
